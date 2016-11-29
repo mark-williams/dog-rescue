@@ -1,4 +1,5 @@
 import React from 'react';
+import Dog from './Dog';
 
 const initialState = {
   dogs: [
@@ -20,7 +21,7 @@ class DogsMaintenance extends React.Component {
       <div>
         <h4>Dog Maintenance</h4>
         <ul>
-          { this.state.dogs.map(dog => (<li>{dog.name}</li>))}
+          { this.state.dogs.map(dog => (<Dog name={dog.name} />)) }
         </ul>
       </div>
     );
