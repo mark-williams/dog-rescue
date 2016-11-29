@@ -21,7 +21,7 @@ class DogsMaintenance extends React.Component {
       <div>
         <h4>Dog Maintenance</h4>
         <ul>
-          { this.state.dogs.map(dog => (<Dog name={dog.name} />)) }
+          { this.state.dogs.map(dog => (<Dog key={dog.id} name={dog.name} />)) }
         </ul>
       </div>
     );
