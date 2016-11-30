@@ -14,7 +14,7 @@ class App extends Component {
           <h2>Welcome to React Dog Rescue</h2>
         </div>
         <NavBar />
-        <div>
+        <div className="container">
           {this.props.children}
         </div>
       </div>
