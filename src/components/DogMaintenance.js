@@ -1,10 +1,30 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import DogForm from './DogForm';
+import { updateDog } from '../actions/actions';
 
-const DogMaintenance = (props) => (
+const DogMaintenance = props => (
   <div>
-    <h4>Create/amend a dog here...</h4>
-    { props.params.id ? `Editing dog ${props.params.id}` : 'Adding a new dog' }
+    <DogForm {...props.dog} onSave={props.onSave}/>
   </div>
 );
 
-export default DogMaintenance;
+const mapStateToProps = (state, ownProps) => {
+  const filtered = state.dogs.filter(dog => dog.id === parseInt(ownProps.params.id, 10));
+  const selectedDog = filtered.length ? filtered[0] : null;
+  return {
+    dog: selectedDog,
+  };
+};
+
+const mapDispatchToProps = dispatch => (
+  {
+    onSave: (dog) => {
+      dispatch(updateDog(dog));
+      browserHistory.push('/dogs');
+    },
+  }
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(DogMaintenance);
