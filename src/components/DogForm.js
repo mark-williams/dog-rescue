@@ -5,12 +5,13 @@ class DogForm extends React.Component {
     super(props);
 
     this.onChange = this.onChange.bind(this);
-    this.state = { item: { ...props } };
+    this.state = { item: Object.assign({}, props.dog) };
   }
 
   onChange(event) {
     const amended = this.state.item;
-    amended.name = event.target.value;
+    const field = event.target.name;
+    amended[field] = event.target.value;
     this.setState({ item: amended });
   }
 
@@ -18,9 +19,23 @@ class DogForm extends React.Component {
     return (
       <div>
         <h4>Create/amend a dog here</h4>
-        <label htmlFor="dogName">Name</label>
-        <input type="text" id="dogName" value={this.state.item.name} onChange={this.onChange} />
-        <button onClick={() => this.props.onSave(this.state.item)}>Save</button>
+        <div className="row">
+          <div className="col s6 left-align">
+            <label htmlFor="dogName" className="left-align">Name</label>
+            <input type="text" id="dogName" name="name" value={this.state.item.name} onChange={this.onChange} />
+          </div>
+        </div>  
+        <div className="row">
+          <div className="col s6 left-align">
+            <label htmlFor="breed">Breed</label>
+            <input type="text" id="breed" name="breed" value={this.state.item.breed} onChange={this.onChange} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s6 left-align">
+            <button className="waves-effect waves-light btn" onClick={() => this.props.onSave(this.state.item)}>Save</button>
+          </div>
+        </div>
       </div>
     );
   }

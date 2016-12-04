@@ -6,7 +6,7 @@ import { updateDog } from '../actions/actions';
 
 const DogMaintenance = props => (
   <div>
-    <DogForm {...props.dog} onSave={props.onSave}/>
+    <DogForm dog={props.dog} onSave={props.onSave}/>
   </div>
 );
 
