@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Dog from './Dog';
 
-const DogsMaintenance = (props) => 
+const DogsMaintenance = props => 
   (
     <div>
       <h4>Dog Maintenance</h4>
@@ -28,9 +28,13 @@ const mapStateToProps = state => (
   }
 );
 
-const mapDispatchToProps = dispatch => (
+const mapDispatchToProps = () => (
   {}
 );
+
+DogsMaintenance.propTypes = {
+  dogs: React.PropTypes.arrayOf(React.PropTypes.object),
+};
 
 export default connect(
   mapStateToProps,

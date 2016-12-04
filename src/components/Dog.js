@@ -17,6 +17,7 @@ Dog.propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
   sex: React.PropTypes.string,
+  breed: React.PropTypes.string,
 };
 
 export default Dog;

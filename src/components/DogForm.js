@@ -24,7 +24,7 @@ class DogForm extends React.Component {
             <label htmlFor="dogName" className="left-align">Name</label>
             <input type="text" id="dogName" name="name" value={this.state.item.name} onChange={this.onChange} />
           </div>
-        </div>  
+        </div>
         <div className="row">
           <div className="col s6 left-align">
             <label htmlFor="breed">Breed</label>
@@ -40,5 +40,10 @@ class DogForm extends React.Component {
     );
   }
 }
+
+DogForm.propTypes = {
+  dog: React.PropTypes.object,
+  onSave: React.PropTypes.function,
+};
 
 export default DogForm;
