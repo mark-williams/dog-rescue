@@ -43,7 +43,8 @@ class DogForm extends React.Component {
 
 DogForm.propTypes = {
   dog: React.PropTypes.object,
-  onSave: React.PropTypes.function,
+  onSave: React.PropTypes.func,
 };
 
 export default DogForm;
+

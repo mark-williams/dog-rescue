@@ -29,7 +29,9 @@ const mapDispatchToProps = dispatch => (
 
 DogMaintenance.propTypes = {
   dog: React.PropTypes.object,
-  onSave: React.PropTypes.function,
+  onSave: React.PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DogMaintenance);
+
+
