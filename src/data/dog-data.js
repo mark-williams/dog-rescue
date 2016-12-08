@@ -7,4 +7,6 @@ const initialState = {
   ],
 };
 
-export default initialState;
+const newDog = { name: '', sex: 'Dog' };
+
+export { initialState, newDog };
