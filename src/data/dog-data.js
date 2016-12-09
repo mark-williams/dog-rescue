@@ -7,6 +7,6 @@ const initialState = {
   ],
 };
 
-const newDog = { name: '', sex: 'Dog' };
+const newDog = { name: '', sex: 'Dog', breed: '' };
 
 export { initialState, newDog };
