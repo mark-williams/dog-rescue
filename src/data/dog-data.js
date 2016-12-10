@@ -8,5 +8,9 @@ const initialState = {
 };
 
 const newDog = { name: '', sex: 'Dog', breed: '' };
+const sexOptions = [
+  { name: 'Dog', value: 'Dog' },
+  { name: 'Bitch', value: 'Bitch' },
+];
 
-export { initialState, newDog };
+export { initialState, newDog, sexOptions };

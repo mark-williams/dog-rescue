@@ -1,4 +1,6 @@
 import React from 'react';
+import Options from './Options';
+import { sexOptions } from '../data/dog-data';
 
 class DogForm extends React.Component {
   constructor(props) {
@@ -17,37 +19,11 @@ class DogForm extends React.Component {
 
   renderOptions() {
     return (
-      <div className="row">
-        <div className="col s6 left-align">
-          <label htmlFor="breed">Sex</label>
-          <div className="row left-align">
-            <div className="col s2">
-              <input
-                type="radio"
-                id="sex-radio-dog"
-                name="sex"
-                value="Dog"
-                checked={this.state.item.sex === 'Dog'}
-                onChange={this.onChange}
-                className="left-align"
-              />
-              <label htmlFor="sex-radio-dog">Dog</label>
-            </div>
-            <div className="col s2 left-align">
-              <input
-                type="radio"
-                id="sex-radio-bitch"
-                name="sex"
-                value="Bitch"
-                checked={this.state.item.sex === 'Bitch'}
-                onChange={this.onChange}
-                className="left-align"
-              />
-              <label htmlFor="sex-radio-bitch">Bitch</label>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Options
+        options={sexOptions}
+        selectedOption={this.state.item.sex}
+        onChange={this.onChange}
+      />
     );
   }
 
