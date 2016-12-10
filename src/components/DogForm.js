@@ -22,6 +22,7 @@ class DogForm extends React.Component {
       <Options
         options={sexOptions}
         selectedOption={this.state.item.sex}
+        label="Sex"
         onChange={this.onChange}
       />
     );
