@@ -9,7 +9,7 @@ describe('Dog tests', () => {
     sex: 'dog',
     breed: 'Labrador',
   };
-
+  
   const setup = props => (
     shallow(<Dog {...props} />)
   );

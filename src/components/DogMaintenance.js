@@ -5,7 +5,7 @@ import DogForm from './DogForm';
 import { updateDog, addDog } from '../actions/actions';
 import { newDog } from '../data/dog-data';
 
-const DogMaintenance = props => (
+export const DogMaintenance = props => (
   <div>
     <DogForm dog={props.dog} onSave={props.onSave} />
   </div>
