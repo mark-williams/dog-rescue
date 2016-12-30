@@ -6,5 +6,7 @@ describe('DogMaintenance', () => {
   it('renders', () => {
     const mounted = mount(<DogMaintenance />);
     expect(mounted).toBeDefined();
+    expect(mounted.find('DogForm').length).toBe(1);
   });
 });
+

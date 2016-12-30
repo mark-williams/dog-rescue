@@ -2,8 +2,8 @@ import React from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import DogForm from './DogForm';
+import { getSelectedDog } from '../selectors/selectors';
 import { updateDog, addDog } from '../actions/actions';
-import { newDog } from '../data/dog-data';
 
 export const DogMaintenance = props => (
   <div>
@@ -12,10 +12,8 @@ export const DogMaintenance = props => (
 );
 
 const mapStateToProps = (state, ownProps) => {
-  const filtered = state.dogs.filter(dog => dog.id === parseInt(ownProps.params.id, 10));
-  const selectedDog = filtered.length ? filtered[0] : newDog;
   return {
-    dog: selectedDog,
+    dog: getSelectedDog(state.dogs, parseInt(ownProps.params.id, 10)),
   };
 };
 
