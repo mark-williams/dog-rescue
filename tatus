@@ -1,0 +1,156 @@
+[33mcommit d593b4ae1b7c515522ab4dc3578fcf419eb26b9f[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sat Dec 10 19:09:15 2016 +0000
+
+    Refatored options component
+
+[33mcommit 87e8d2d36ad482a0fcf6b6a441eef0adbafead01[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sat Dec 10 14:22:33 2016 +0000
+
+    Extracted options into its own stateless component
+
+[33mcommit d57264e7d1c6e53cc2fec65d8e86408479225b6a[m
+Merge: 9cfabb9 10b9b22
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Fri Dec 9 18:07:45 2016 +0000
+
+    Merged readme
+
+[33mcommit 9cfabb9765c751bc8ac3c4adc7035bc9aafa537c[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Fri Dec 9 18:04:41 2016 +0000
+
+    Extracted options in to their own function; fixed issue with new dog's breed not being set, causing a controlled/uncontrolled warning.
+
+[33mcommit 10b9b226900d2a1ee47736dbf948405c929d0ba4[m
+Author: Mark Williams <markwill@hotmail.co.uk>
+Date:   Fri Dec 9 17:33:58 2016 +0000
+
+    Added Travis build status image
+
+[33mcommit ab664953645aa5c66ca3bafd729ee480caf91a78[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Fri Dec 9 17:21:40 2016 +0000
+
+    Added yml file for Travis
+
+[33mcommit d95b2f8ceb2db7320a5e0a2d08b68dc82a557d30[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Fri Dec 9 17:18:01 2016 +0000
+
+    Added tests for dog reducer
+
+[33mcommit 3b00751f0f5b4d9dc97e4c0172315a432ec17f6a[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 8 18:15:50 2016 +0000
+
+    Reorg of form controls
+
+[33mcommit 908131e1f3dc0fba4885aa3f49b4f3c8a0a7da1c[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 8 17:49:18 2016 +0000
+
+    Dog sex now captured by radio buttons
+
+[33mcommit 4e991e409563730dbcfc0431746d6f817dc267e5[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 8 10:09:20 2016 +0000
+
+    Support adding new dog
+
+[33mcommit 4419ef0a8936e07f7a9cb27fa5f820fc39ca8e6b[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Dec 6 11:52:32 2016 +0000
+
+    Fixed prop type issue (should be 'func')
+
+[33mcommit 6e0750d1036813fe83a089e51d5d62065e555928[m
+Author: Mark Williams <will@Marks-MBP.home>
+Date:   Tue Dec 6 11:19:41 2016 +0000
+
+    Fixed failing test
+
+[33mcommit 586fa538d7f6826b8a5c132366ffe7c83d16917f[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sun Dec 4 16:38:51 2016 +0000
+
+    Fixed some linting issues
+
+[33mcommit 7e174d539d8125ef55035b650dd07122a2eb1f6a[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sun Dec 4 16:24:45 2016 +0000
+
+    Added breed to dog edit form
+
+[33mcommit b7e2e4b7d16927445cd90052fa6224b30fb40e58[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sun Dec 4 11:01:55 2016 +0000
+
+    Supports editing of dog name
+
+[33mcommit 5a4370cb03081921d419bc2f015a51f233f167af[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sat Dec 3 18:16:40 2016 +0000
+
+    Connected DogsMaintenance to redux store; now stateless functional component.
+
+[33mcommit 44a0575d95cd5d074bb74675eedc8eb9811956ca[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Sat Dec 3 17:55:25 2016 +0000
+
+    Added provider to entry point to pass redux store down to children
+
+[33mcommit 88494b8d3e7fd5053dc6cbf590c9958f4981bd39[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 1 15:59:09 2016 +0000
+
+    Created dogs reducer plus a root reducer and store creator
+
+[33mcommit 9761e69f5de518c09672b3c2940267d0dfdb2b5b[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 1 15:49:22 2016 +0000
+
+    Starting to implement redux
+
+[33mcommit bafe9137995ba26709664cef953d2444dba57157[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Thu Dec 1 15:43:50 2016 +0000
+
+    Created component to manage editing a dog record, plus route (currently just a stub)
+
+[33mcommit 76eab768be6f963a37557cc32f47b4b2c93c7331[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Wed Nov 30 10:07:58 2016 +0000
+
+    Dog list now in a MaterializeCSS table
+
+[33mcommit 73f09759a014b478fd34e95ecfb62680e8530193[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Nov 29 10:34:23 2016 +0000
+
+    Added navigation
+
+[33mcommit 64efe7888d1cf453b875821e04c62146cf47d1ca[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Nov 29 10:11:21 2016 +0000
+
+    Extracted dog rendering into separate stateless component
+
+[33mcommit 77ce7c6c77f6170d6cf9444b83cef59d4f945825[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Nov 29 10:00:35 2016 +0000
+
+    Added some hard-coded state (will reduxify once components mapped out)
+
+[33mcommit 50f30239e52a021e7224456347a46f658bc5f926[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Nov 29 09:45:22 2016 +0000
+
+    Amended readme
+
+[33mcommit 0aaf78042e43f45362c2248d70b482ebffca0511[m
+Author: mark-williams <markwill@hotmail.co.uk>
+Date:   Tue Nov 29 09:44:21 2016 +0000
+
+    Initial
