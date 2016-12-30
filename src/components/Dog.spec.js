@@ -1,47 +1,36 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { shallow } from 'enzyme';
 import Dog from './Dog';
 
 describe('Dog tests', () => {
   const testProps = {
+    id: 871,
     name: 'Fred',
     sex: 'dog',
     breed: 'Labrador',
   };
 
-  const setup = (props) => {
-    const renderer = TestUtils.createRenderer();
-    renderer.render(<Dog {...props} />);
-    const output = renderer.getRenderOutput();
-
-    return {
-      props,
-      output,
-    };
-  };
-
+  const setup = props => (
+    shallow(<Dog {...props} />)
+  );
 
   it('renders a table row', () => {
-    const { output } = setup(testProps);
-    expect(output.type).toBe('tr');
+    const output = setup(testProps);
+    expect(output.find('tr').length).toBe(1);
   });
 
   it('renders name', () => {
-    const { output } = setup(testProps);
-    expect(output.props.children[1].type).toBe('td');
-    expect(output.props.children[1].props.children.props.children).toBe(testProps.name);
+    const output = setup(testProps);
+    expect(output.find('Link').at(1).childAt(0).text()).toBe(testProps.name);
   });
 
   it('renders sex', () => {
-    const { output } = setup(testProps);
-    expect(output.props.children[2].type).toBe('td');
-    expect(output.props.children[2].props.children).toBe(testProps.sex);
+    const output = setup(testProps);
+    expect(output.find('td').at(2).text()).toBe(testProps.sex);
   });
 
   it('renders breed', () => {
-    const { output } = setup(testProps);
-    expect(output.props.children[3].type).toBe('td');
-    expect(output.props.children[3].props.children).toBe(testProps.breed);
+    const output = setup(testProps);
+    expect(output.find('td').at(3).text()).toBe(testProps.breed);
   });
-
 });
