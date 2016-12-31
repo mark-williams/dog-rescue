@@ -2,8 +2,8 @@ import React from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import DogForm from './DogForm';
-import { getSelectedDog } from '../selectors/selectors';
-import { updateDog, addDog } from '../actions/actions';
+import { getSelectedDog } from '../../selectors/selectors';
+import { updateDog, addDog } from '../../actions/actions';
 
 export const DogMaintenance = props => (
   <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Options from './Options';
-import { sexOptions } from '../data/dog-data';
+import { sexOptions } from '../../data/dog-data';
 
 class DogForm extends React.Component {
   constructor(props) {
