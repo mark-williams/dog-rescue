@@ -11,11 +11,11 @@ export const DogMaintenance = props => (
   </div>
 );
 
-const mapStateToProps = (state, ownProps) => {
-  return {
+const mapStateToProps = (state, ownProps) => (
+  {
     dog: getSelectedDog(state.dogs, parseInt(ownProps.params.id, 10)),
-  };
-};
+  }
+);
 
 const mapDispatchToProps = dispatch => (
   {
